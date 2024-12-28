@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Generate random string, number, color, date here</title>
+</head>
+<body>
+   <div class="wrapper">
+        <div class="generator-panel" id="number-panel">
+            <h1>Number Generator</h1>
+            <div class="num-controls-panel">
+                <div>
+                    <label for="min-num">Min</label>
+                    <input type="number" id="min-num" placeholder="0" value="0">
+    
+                    <label for="max-num">Max:</label>
+                    <input type="number" id="max-num" placeholder="10" value="10">
+                </div>
+
+                <div class="buttons-panel">
+                    <button id="gen-num">Generate</button>
+                    <button id="reset-num">Reset</button>
+                </div>
+            </div>
+
+            <span class="result" id="num-res">0</span>
+        </div>
+
+        <div class="generator-panel hidden" id="string-panel">
+            <h1>String Generator</h1>
+            <div class="str-controls-panel">
+                <div class="str-inputs-panel">
+                    <div class="input-group">
+                        <label for="length-str">Length:</label>
+                        <input type="number" id="length-str" placeholder="8" value="8">
+                    </div>
+                
+                    <div class="input-group">
+                        <label for="Az-check">A-z</label>
+                        <input type="checkbox" id="letter-check" checked>
+                    </div>
+                
+                    <div class="input-group">
+                        <label for="check-09">0-9</label>
+                        <input type="checkbox" id="numbers-check" checked>
+                    </div>
+                
+                    <div class="input-group">
+                        <label for="symbols-check">!#$@</label>
+                        <input type="checkbox" id="symbols-check">
+                    </div>
+                </div>
+
+                <div class="buttons-panel">
+                    <button id="gen-str">Generate</button>
+                    <button id="reset-str">Reset</button>
+                </div>
+            </div>  
+
+            <span class="result" id="str-res">ABC</span>
+        </div>
+
+        <div class="generator-panel hidden" id="color-panel">
+            <h1>Color Generator</h1>
+
+            <div class="color-controls-panel">
+                <div class="color-channel">
+                    <label for="min-r">R:</label>
+                    <input type="number" id="min-r" min="0" max="255" placeholder="MIN" value="0">
+                    <span>-</span>
+                    <input type="number" id="max-r" min="0" max="255" placeholder="MAX" value="255">
+                </div>
+            
+                <div class="color-channel">
+                    <label for="min-g">G:</label>
+                    <input type="number" id="min-g" min="0" max="255" placeholder="MIN" value="0">
+                    <span>-</span>
+                    <input type="number" id="max-g" min="0" max="255" placeholder="MAX" value="255">
+                </div>
+            
+                <div class="color-channel">
+                    <label for="min-b">B:</label>
+                    <input type="number" id="min-b" min="0" max="255" placeholder="MIN" value="0">
+                    <span>-</span>
+                    <input type="number" id="max-b" min="0" max="255" placeholder="MAX" value="255">
+                </div>
+            
+                <div class="buttons-panel">
+                    <button id="gen-color">Generate Color</button>
+                    <button id="reset-color">Reset</button>
+                </div>
+            </div>
+
+            <span class="result" id="color-res">#000000</span>
+        </div>
+
+        <div class="generator-panel hidden" id="date-panel">
+            <h1>Date Generator</h1>
+
+            <div class="date-options-panel">
+                <div>
+                    <label for="min-date">Range:</label>
+                    <input type="date" id="min-date" value="1970-01-01">
+                    <span>-</span>
+                    <input type="date" id="max-date" value="1970-01-01">
+                </div>
+            
+                <div class="buttons-panel">
+                    <button id="gen-date">Generate Date</button>
+                    <button id="reset-date">Reset</button>
+                </div>
+            </div>
+
+            <span class="result" id="date-res">01/01/1970</span>
+        </div>
+
+        <div class="switch-panel" id="switch-panel">
+            <span id="number-switch" class="switch-item selected">Number</span>
+            <span id="string-switch" class="switch-item">String</span>
+            <span id="color-switch" class="switch-item">Color</span>
+            <span id="date-switch" class="switch-item">Date</span>
+        </div>
+   </div>
+
+   <script src="switch.js"></script>
+   <script src="panels.js"></script>
+   <script src="generator.js"></script>
+</body>
+</html>
